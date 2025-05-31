@@ -8,9 +8,76 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @State var isReport = false
+    @State var isStats = false
+    
+    
+    
+    @State var Today = Date()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack (spacing: 15){
+                ZStack (alignment: .top){
+                    MapView()
+                        .frame(height: 550)
+                    HStack (spacing: 15){
+                        NavigationLink{
+                            ReportView()
+                        }
+                        label : {
+                            HStack{
+                                Image(systemName: "light.beacon.min")
+                                Text("신고하기")
+                            }
+                        }
+                        .buttonStyle(MapButton())
+                        
+                        NavigationLink{
+                            ReportView()
+                        }
+                        label : {
+                            HStack{
+                                Image(systemName: "light.beacon.min")
+                                Text("신고하기")
+                            }
+                        }
+                        .buttonStyle(MapButton())
+                    }
+                }
+
+                VStack{
+                    Text("\(DateString(in: Today)) 주의사항")
+                        .font(.system(size: 15))
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.customGray)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text("현재 날씨는 비가와서 위험해요")
+                        .LevelStyle(backgroundColor: Color.customGreen)
+                    Text("현재 날씨는 비가와서 위험해요")
+                        .LevelStyle(backgroundColor: Color.yellow)
+
+                    
+                }
+                .padding(.horizontal, 20)
+                
+                
+                
+                
+                //                .padding(.top, 0)
+                //                .padding(.bottom, 8)
+                //                .frame(width: 393, alignment: .topTrailing)
+                
+            }
+            Spacer()
+        }
+        
+        
     }
+    
+    
 }
 
 #Preview {
