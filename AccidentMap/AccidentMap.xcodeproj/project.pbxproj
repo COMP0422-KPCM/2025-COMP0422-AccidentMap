@@ -14,6 +14,9 @@
 		DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D292DE59B8F002281F8 /* MainView.swift */; };
 		DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */; };
 		DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */; };
+		DE940F8E2DEACCA200A003ED /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE940F8D2DEACCA200A003ED /* MapView.swift */; };
+		DE940F902DEB214D00A003ED /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE940F8F2DEB214D00A003ED /* Extention.swift */; };
+		DE940F932DEB37D300A003ED /* 준비중.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE940F922DEB37D300A003ED /* 준비중.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		DE5A1D292DE59B8F002281F8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		DE940F8D2DEACCA200A003ED /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		DE940F8F2DEB214D00A003ED /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		DE940F922DEB37D300A003ED /* 준비중.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "준비중.jpg"; path = "../../../../apple_dev/2024-NC2-M31-Maps/Nano2/Nano2/준비중.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +66,13 @@
 				DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */,
 				DE10C3C62DDD9E170074BAE3 /* ContentView.swift */,
 				DE5A1D292DE59B8F002281F8 /* MainView.swift */,
+				DE940F8D2DEACCA200A003ED /* MapView.swift */,
 				DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */,
 				DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */,
 				DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */,
+				DE940F922DEB37D300A003ED /* 준비중.jpg */,
 				DE10C3CA2DDD9E180074BAE3 /* Preview Content */,
+				DE940F8F2DEB214D00A003ED /* Extention.swift */,
 			);
 			path = AccidentMap;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE940F932DEB37D300A003ED /* 준비중.jpg in Resources */,
 				DE10C3CC2DDD9E180074BAE3 /* Preview Assets.xcassets in Resources */,
 				DE10C3C92DDD9E180074BAE3 /* Assets.xcassets in Resources */,
 			);
@@ -147,10 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */,
+				DE940F8E2DEACCA200A003ED /* MapView.swift in Sources */,
 				DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */,
 				DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */,
 				DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */,
 				DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */,
+				DE940F902DEB214D00A003ED /* Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
