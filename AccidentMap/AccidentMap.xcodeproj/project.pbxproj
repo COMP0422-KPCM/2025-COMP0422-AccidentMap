@@ -14,6 +14,7 @@
 		DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D292DE59B8F002281F8 /* MainView.swift */; };
 		DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */; };
 		DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */; };
+		DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB83192DEB5DAC00E9AD61 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		DE5A1D292DE59B8F002281F8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		DEFB83192DEB5DAC00E9AD61 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */,
 				DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */,
 				DE10C3CA2DDD9E180074BAE3 /* Preview Content */,
+				DEFB83192DEB5DAC00E9AD61 /* Extension.swift */,
 			);
 			path = AccidentMap;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */,
 				DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */,
 				DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */,
+				DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */,
 				DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */,
 				DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */,
 			);

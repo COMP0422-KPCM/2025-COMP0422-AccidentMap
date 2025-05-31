@@ -9,7 +9,58 @@ import SwiftUI
 
 struct ReportView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Image("준비중")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 393, height: 393)
+                .clipped()
+            
+            VStack{
+                
+                HStack{
+                    Text("날짜")
+                        .foregroundColor(Color.customGray)
+                    Spacer()
+                    Text("2025년 5월 27일")
+                        .foregroundColor(Color.customOrange)
+                }
+                .ListStyle()
+                
+                HStack{
+                    Text("날짜")
+                        .foregroundColor(Color.customGray)
+                    Spacer()
+                    Text("2025년 5월 27일")
+                        .foregroundColor(Color.customOrange)
+                }
+                .ListStyle()
+                
+                HStack{
+                    Text("날짜")
+                        .foregroundColor(Color.customGray)
+                    Spacer()
+                    Text("2025년 5월 27일")
+                        .foregroundColor(Color.customOrange)
+                }
+                .ListStyle()
+                
+                HStack{
+                    Text("날짜")
+                        .foregroundColor(Color.customGray)
+                    Spacer()
+                    Text("2025년 5월 27일")
+                        .foregroundColor(Color.customOrange)
+                }
+                .ListStyle()
+                
+            }
+            .padding(.horizontal, 16)
+            
+            Text("제출하기")
+                .LevelStyle(backgroundColor: Color.yellow)
+                .padding(.horizontal, 16)
+        }
     }
 }
 
