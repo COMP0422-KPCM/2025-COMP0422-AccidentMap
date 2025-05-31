@@ -10,13 +10,27 @@ import MapKit
 
 
 struct MapView: View {
-    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
+    @Namespace var mapScope
     
+    @State private var position: MapCameraPosition = .automatic
+    
+    @StateObject private var locationManager = LocationManager()
+
     var body: some View {
-                Map(position: $position){
-                    UserAnnotation()
-                    
-                }
+        ZStack(alignment: .bottomTrailing){
+            
+            Map(scope: mapScope)
+            MapUserLocationButton(scope: mapScope)
+                .frame(width: 43)
+                .background(.white)
+                .cornerRadius(100)
+                .padding()
+
+            
+        }
+        .mapScope(mapScope)
+    
+
 //                .ignoresSafeArea()
                 .toolbarBackground(.hidden, for: .navigationBar)
 
