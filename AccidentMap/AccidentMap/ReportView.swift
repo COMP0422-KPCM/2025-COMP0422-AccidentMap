@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ReportView: View {
     var body: some View {
-        VStack{
+        VStack(spacing: 30){
             Image("준비중")
                 .resizable()
                 .scaledToFill()
@@ -17,7 +17,6 @@ struct ReportView: View {
                 .clipped()
             
             VStack{
-                
                 HStack{
                     Text("날짜")
                         .foregroundColor(Color.customGray)
@@ -61,9 +60,18 @@ struct ReportView: View {
                 .LevelStyle(backgroundColor: Color.yellow)
                 .padding(.horizontal, 16)
         }
+        Spacer()
     }
 }
 
 #Preview {
-    ReportView()
+    NavigationStack{
+        ReportView()
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("<")
+                }
+            }
+    }
 }

@@ -39,15 +39,15 @@ struct MainView: View {
                         }
                         label : {
                             HStack{
-                                Image(systemName: "light.beacon.min")
-                                Text("신고하기")
+                                Image(systemName: "chart.bar")
+                                Text("통계보기")
                             }
                         }
                         .buttonStyle(MapButton())
                     }
                 }
 
-                VStack{
+                VStack(spacing: 10){
                     Text("\(DateString(in: Today)) 주의사항")
                         .font(.system(size: 15))
                         .fontWeight(.semibold)
@@ -73,6 +73,7 @@ struct MainView: View {
             }
             Spacer()
         }
+
         
         
     }
@@ -81,5 +82,7 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    NavigationStack{
+        MainView()
+    }
 }

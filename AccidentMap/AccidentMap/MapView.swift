@@ -13,16 +13,16 @@ struct MapView: View {
     @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
     
     var body: some View {
-        VStack(spacing: 24){
-            ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)){
                 Map(position: $position){
+                    UserAnnotation()
                     
                 }
-//                .mapControls{
-//                    MapUserLocationButton()
-//                }
-            }
-        }
+//                .ignoresSafeArea()
+                .toolbarBackground(.hidden, for: .navigationBar)
+
+                .mapControls{
+                    MapUserLocationButton()
+                }
     }
 }
 
