@@ -10,7 +10,7 @@ import SwiftUI
 struct ReportView: View {
     var body: some View {
         VStack(spacing: 30){
-            Image("준비중")
+            Image("temp")
                 .resizable()
                 .scaledToFill()
                 .frame(width: 393, height: 393)

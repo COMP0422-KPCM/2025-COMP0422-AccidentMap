@@ -34,9 +34,6 @@ struct MapView: View {
 //                .ignoresSafeArea()
                 .toolbarBackground(.hidden, for: .navigationBar)
 
-                .mapControls{
-                    MapUserLocationButton()
-                }
     }
 }
 

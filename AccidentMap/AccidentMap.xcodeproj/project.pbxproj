@@ -14,9 +14,9 @@
 		DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D292DE59B8F002281F8 /* MainView.swift */; };
 		DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */; };
 		DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */; };
+		DE9C80C52DEC877900809E77 /* temp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE9C80C42DEC877900809E77 /* temp.jpg */; };
 		DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB83192DEB5DAC00E9AD61 /* Extension.swift */; };
 		DEFB831C2DEB5F0000E9AD61 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB831B2DEB5F0000E9AD61 /* MapView.swift */; };
-		DEFB831E2DEB638500E9AD61 /* 준비중.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEFB831D2DEB638500E9AD61 /* 준비중.jpg */; };
 		DEFB83202DEB64A400E9AD61 /* AccidentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */; };
 		DEFB83222DEB6DC100E9AD61 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB83212DEB6DC100E9AD61 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
@@ -30,9 +30,9 @@
 		DE5A1D292DE59B8F002281F8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		DE9C80C42DEC877900809E77 /* temp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = temp.jpg; path = AccidentMap/temp.jpg; sourceTree = SOURCE_ROOT; };
 		DEFB83192DEB5DAC00E9AD61 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DEFB831B2DEB5F0000E9AD61 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		DEFB831D2DEB638500E9AD61 /* 준비중.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "준비중.jpg"; sourceTree = "<group>"; };
 		DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentModel.swift; sourceTree = "<group>"; };
 		DEFB83212DEB6DC100E9AD61 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,9 +76,9 @@
 				DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */,
 				DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */,
 				DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */,
+				DE9C80C42DEC877900809E77 /* temp.jpg */,
 				DE10C3CA2DDD9E180074BAE3 /* Preview Content */,
 				DEFB83192DEB5DAC00E9AD61 /* Extension.swift */,
-				DEFB831D2DEB638500E9AD61 /* 준비중.jpg */,
 			);
 			path = AccidentMap;
 			sourceTree = "<group>";
@@ -149,8 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEFB831E2DEB638500E9AD61 /* 준비중.jpg in Resources */,
 				DE10C3CC2DDD9E180074BAE3 /* Preview Assets.xcassets in Resources */,
+				DE9C80C52DEC877900809E77 /* temp.jpg in Resources */,
 				DE10C3C92DDD9E180074BAE3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
