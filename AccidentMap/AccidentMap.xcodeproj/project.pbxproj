@@ -12,6 +12,12 @@
 		9DAC54A02DEC719C00E64226 /* UIKitMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */; };
 		9DAC54A42DEC7ACD00E64226 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC54A32DEC7ACD00E64226 /* MapViewRepresentable.swift */; };
 		9DAC54A72DEC7D2E00E64226 /* SearchCompleterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC54A62DEC7D2E00E64226 /* SearchCompleterViewModel.swift */; };
+		9DAC55062DED82E500E64226 /* gptmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC55032DED82E500E64226 /* gptmanager.swift */; };
+		9DAC55072DED82E500E64226 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC55042DED82E500E64226 /* ImagePicker.swift */; };
+		9DAC55082DED82E500E64226 /* Content1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC55022DED82E500E64226 /* Content1View.swift */; };
+		9DAC55092DED82E500E64226 /* AccidentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC55012DED82E500E64226 /* AccidentViewModel.swift */; };
+		9DAC550A2DED82E500E64226 /* AccidentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC55002DED82E500E64226 /* AccidentInfoView.swift */; };
+		9DAC550B2DED82E500E64226 /* AccidentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC54FF2DED82E500E64226 /* AccidentInfo.swift */; };
 		DE05AE402DED4622003032D3 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE05AE3F2DED4622003032D3 /* WeatherView.swift */; };
 		DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */; };
 		DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C3C62DDD9E170074BAE3 /* ContentView.swift */; };
@@ -33,6 +39,12 @@
 		9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMapView.swift; sourceTree = "<group>"; };
 		9DAC54A32DEC7ACD00E64226 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		9DAC54A62DEC7D2E00E64226 /* SearchCompleterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompleterViewModel.swift; sourceTree = "<group>"; };
+		9DAC54FF2DED82E500E64226 /* AccidentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentInfo.swift; sourceTree = "<group>"; };
+		9DAC55002DED82E500E64226 /* AccidentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentInfoView.swift; sourceTree = "<group>"; };
+		9DAC55012DED82E500E64226 /* AccidentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentViewModel.swift; sourceTree = "<group>"; };
+		9DAC55022DED82E500E64226 /* Content1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content1View.swift; sourceTree = "<group>"; };
+		9DAC55032DED82E500E64226 /* gptmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptmanager.swift; sourceTree = "<group>"; };
+		9DAC55042DED82E500E64226 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DE05AE3F2DED4622003032D3 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		DE10C3C12DDD9E170074BAE3 /* AccidentMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccidentMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentMapApp.swift; sourceTree = "<group>"; };
@@ -64,6 +76,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DAC55052DED82E500E64226 /* GPT */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC54FF2DED82E500E64226 /* AccidentInfo.swift */,
+				9DAC55002DED82E500E64226 /* AccidentInfoView.swift */,
+				9DAC55012DED82E500E64226 /* AccidentViewModel.swift */,
+				9DAC55022DED82E500E64226 /* Content1View.swift */,
+				9DAC55032DED82E500E64226 /* gptmanager.swift */,
+				9DAC55042DED82E500E64226 /* ImagePicker.swift */,
+			);
+			path = GPT;
+			sourceTree = "<group>";
+		};
 		DE10C3B82DDD9E170074BAE3 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +111,7 @@
 				DEB4961A2DED69FA00CC124F /* AccidentMap.entitlements */,
 				DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */,
 				9DAC54A62DEC7D2E00E64226 /* SearchCompleterViewModel.swift */,
+				9DAC55052DED82E500E64226 /* GPT */,
 				9DAC54A52DEC7B8500E64226 /* Views */,
 				9DAC54A32DEC7ACD00E64226 /* MapViewRepresentable.swift */,
 				9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */,
@@ -189,6 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DAC55062DED82E500E64226 /* gptmanager.swift in Sources */,
+				9DAC55072DED82E500E64226 /* ImagePicker.swift in Sources */,
+				9DAC55082DED82E500E64226 /* Content1View.swift in Sources */,
+				9DAC55092DED82E500E64226 /* AccidentViewModel.swift in Sources */,
+				9DAC550A2DED82E500E64226 /* AccidentInfoView.swift in Sources */,
+				9DAC550B2DED82E500E64226 /* AccidentInfo.swift in Sources */,
 				DEFB831C2DEB5F0000E9AD61 /* MapView.swift in Sources */,
 				9DAC54A02DEC719C00E64226 /* UIKitMapView.swift in Sources */,
 				DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */,
