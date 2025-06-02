@@ -11,8 +11,8 @@ import SwiftUI
 struct AccidentMapApp: App {
     var body: some Scene {
         WindowGroup {
-            WeatherView()
-//            MainView()
+//            WeatherView()
+            MainView()
 //            MapHotspotView(viewModel: MockMapHotspotViewModel())
         }
     }

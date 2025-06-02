@@ -20,7 +20,7 @@ struct MainView: View {
         NavigationStack{
             VStack (spacing: 15){
                 ZStack (alignment: .top){
-                    MapView()
+                    MapHotspotView()
                         .frame(height: 550)
                     HStack (spacing: 15){
                         NavigationLink{
@@ -59,9 +59,10 @@ struct MainView: View {
                     Text("현재 날씨는 비가와서 위험해요")
                         .LevelStyle(backgroundColor: Color.yellow)
 
-                    
+                    WeatherView()
                 }
                 .padding(.horizontal, 20)
+                
                 
                 
                 

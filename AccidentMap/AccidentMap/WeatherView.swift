@@ -17,8 +17,13 @@ struct WeatherView: View {
         VStack {
             if let location = locationManager.currentLocation {
                 if let currentWeather = weatherServiceManager.currentWeather {
-                    Text("Temperature: \(currentWeather.temperature.formatted())")
+                    
+                    Text("현재 기온은 \(currentWeather.temperature.formatted()) 입니다.")
+                        .LevelStyle(backgroundColor: Color.customGreen)
+
                     Text("Condition: \(currentWeather.condition.description)")
+                        .LevelStyle(backgroundColor: Color.customGreen)
+
                 } else {
                     ProgressView("Loading weather data...")
                         .onAppear {
@@ -36,13 +41,6 @@ struct WeatherView: View {
         .padding()
     }
 }
-
-
-import Foundation
-import CoreLocation
-
-
-
 
 import Foundation
 import WeatherKit
@@ -63,5 +61,11 @@ class WeatherServiceManager: ObservableObject {
         } catch {
             print("Failed to fetch weather data: \(error.localizedDescription)")
         }
+    }
+}
+
+#Preview {
+    NavigationStack{
+        WeatherView()
     }
 }

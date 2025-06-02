@@ -46,11 +46,11 @@ struct MapHotspotView: View {
     @State private var isSearchResultsVisible = false
     @State private var isSearchButtonVisible = false
     @State private var lastUserLocation: CLLocationCoordinate2D? = nil
-
+    
     init(viewModel: MapHotspotViewModel = MapHotspotViewModel()) {
         _viewModel = ObservedObject(wrappedValue: viewModel)
     }
-
+    
     var body: some View {
         ZStack {
             MapViewRepresentable(
@@ -66,8 +66,8 @@ struct MapHotspotView: View {
                 sheetDetent: .constant(0)
             )
             .edgesIgnoringSafeArea(.all)
-
-            VStack(spacing: 0) {
+            
+            VStack(spacing: 10) {
                 TextField("장소 또는 주소 검색", text: $searchText, onEditingChanged: { editing in
                     isSearchResultsVisible = editing
                 })
@@ -78,7 +78,7 @@ struct MapHotspotView: View {
                 .onChange(of: searchText) { newValue in
                     searchVM.updateSearchQuery(newValue)
                 }
-
+                
                 if isSearchResultsVisible && !searchVM.searchResults.isEmpty {
                     List(searchVM.searchResults, id: \.self) { result in
                         VStack(alignment: .leading) {
@@ -109,12 +109,12 @@ struct MapHotspotView: View {
                         .background(Color.blue)
                         .cornerRadius(10)
                 }
-                .padding(.top, 40)
-
-
-
+                
+                
+                
                 Spacer()
             }
+            .padding(.top, 35)
         }
         .sheet(isPresented: $isSheetPresented) {
             VStack(spacing: 20) {
@@ -139,7 +139,7 @@ struct MapHotspotView: View {
             viewModel.fetchHotspots(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
         }
     }
-
+    
     // 주소 → 좌표 변환
     func searchAddress(_ address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
         let geocoder = CLGeocoder()
@@ -155,7 +155,7 @@ struct MapHotspotView: View {
     func searchLocation(for result: MKLocalSearchCompletion) {
         let searchRequest = MKLocalSearch.Request(completion: result)
         let search = MKLocalSearch(request: searchRequest)
-
+        
         search.start { response, error in
             guard let coordinate = response?.mapItems.first?.placemark.coordinate else {
                 print("검색 실패: \(error?.localizedDescription ?? "알 수 없음")")
@@ -180,7 +180,7 @@ class MockMapHotspotViewModel: MapHotspotViewModel {
             Hotspot(id: 3, lat: 37.3330, lng: -122.0093, count: 5)    // 정중앙에서 서쪽
         ]
     }
-
+    
 }
 
 struct MapHotspotView_Previews: PreviewProvider {
