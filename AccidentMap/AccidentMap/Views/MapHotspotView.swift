@@ -114,8 +114,17 @@ struct MapHotspotView: View {
                 
                 Spacer()
             }
+            
             .padding(.top, 35)
         }
+        .frame(height: 550)
+
+        
+        
+        
+        
+        
+        
         .sheet(isPresented: $isSheetPresented) {
             VStack(spacing: 20) {
                 if let hotspot = selectedHotspot {

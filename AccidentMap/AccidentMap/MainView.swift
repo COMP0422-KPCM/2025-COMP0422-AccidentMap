@@ -58,11 +58,10 @@ struct MainView: View {
                         .LevelStyle(backgroundColor: Color.customGreen)
                     Text("현재 날씨는 비가와서 위험해요")
                         .LevelStyle(backgroundColor: Color.yellow)
-
                     WeatherView()
+                    
                 }
                 .padding(.horizontal, 20)
-                
                 
                 
                 
@@ -72,6 +71,7 @@ struct MainView: View {
                 //                .frame(width: 393, alignment: .topTrailing)
                 
             }
+
             Spacer()
         }
 
