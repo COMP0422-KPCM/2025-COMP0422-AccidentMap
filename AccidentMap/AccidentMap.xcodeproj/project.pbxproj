@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DE05AE402DED4622003032D3 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE05AE3F2DED4622003032D3 /* WeatherView.swift */; };
+		9D3D15A82DE85E0700624B31 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3D15A72DE85DFF00624B31 /* function.swift */; };
+		9DAC549D2DEC65E800E64226 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC549C2DEC65DC00E64226 /* LocationManager.swift */; };
+		9DAC54A02DEC719C00E64226 /* UIKitMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */; };
+		9DAC54A42DEC7ACD00E64226 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC54A32DEC7ACD00E64226 /* MapViewRepresentable.swift */; };
+		9DAC54A72DEC7D2E00E64226 /* SearchCompleterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC54A62DEC7D2E00E64226 /* SearchCompleterViewModel.swift */; };
 		DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */; };
 		DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C3C62DDD9E170074BAE3 /* ContentView.swift */; };
 		DE10C3C92DDD9E180074BAE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */; };
@@ -23,6 +28,12 @@
 
 /* Begin PBXFileReference section */
 		DE05AE3F2DED4622003032D3 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		9D3D15A72DE85DFF00624B31 /* function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function.swift; sourceTree = "<group>"; };
+		9DAC549C2DEC65DC00E64226 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		9DAC549E2DEC669A00E64226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMapView.swift; sourceTree = "<group>"; };
+		9DAC54A32DEC7ACD00E64226 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		9DAC54A62DEC7D2E00E64226 /* SearchCompleterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompleterViewModel.swift; sourceTree = "<group>"; };
 		DE10C3C12DDD9E170074BAE3 /* AccidentMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccidentMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentMapApp.swift; sourceTree = "<group>"; };
 		DE10C3C62DDD9E170074BAE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +47,10 @@
 		DEFB831B2DEB5F0000E9AD61 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9DAC54A52DEC7B8500E64226 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DE10C3BE2DDD9E170074BAE3 /* Frameworks */ = {
@@ -67,9 +82,17 @@
 		DE10C3C32DDD9E170074BAE3 /* AccidentMap */ = {
 			isa = PBXGroup;
 			children = (
+				9DAC54A62DEC7D2E00E64226 /* SearchCompleterViewModel.swift */,
+				9DAC54A52DEC7B8500E64226 /* Views */,
+				9DAC54A32DEC7ACD00E64226 /* MapViewRepresentable.swift */,
+				9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */,
+				9DAC549E2DEC669A00E64226 /* Info.plist */,
+				9DAC549C2DEC65DC00E64226 /* LocationManager.swift */,
 				DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */,
 				DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */,
 				DE10C3C62DDD9E170074BAE3 /* ContentView.swift */,
+				9D3D15A72DE85DFF00624B31 /* function.swift */,
+
 				DE5A1D292DE59B8F002281F8 /* MainView.swift */,
 				DEFB831B2DEB5F0000E9AD61 /* MapView.swift */,
 				DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */,
@@ -105,6 +128,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9DAC54A52DEC7B8500E64226 /* Views */,
 			);
 			name = AccidentMap;
 			productName = AccidentMap;
@@ -163,14 +189,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEFB831C2DEB5F0000E9AD61 /* MapView.swift in Sources */,
+				9DAC54A02DEC719C00E64226 /* UIKitMapView.swift in Sources */,
 				DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */,
 				DEFB83202DEB64A400E9AD61 /* AccidentModel.swift in Sources */,
+				9DAC54A42DEC7ACD00E64226 /* MapViewRepresentable.swift in Sources */,
 				DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */,
 				DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */,
 				DE05AE402DED4622003032D3 /* WeatherView.swift in Sources */,
 				DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */,
 				DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */,
 				DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */,
+				9DAC549D2DEC65E800E64226 /* LocationManager.swift in Sources */,
+				9DAC54A72DEC7D2E00E64226 /* SearchCompleterViewModel.swift in Sources */,
+				9D3D15A82DE85E0700624B31 /* function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +339,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한 받기";
+				INFOPLIST_FILE = AccidentMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -338,6 +372,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한 받기";
+				INFOPLIST_FILE = AccidentMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
