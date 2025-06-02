@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE05AE402DED4622003032D3 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE05AE3F2DED4622003032D3 /* WeatherView.swift */; };
 		DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */; };
 		DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C3C62DDD9E170074BAE3 /* ContentView.swift */; };
 		DE10C3C92DDD9E180074BAE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE05AE3F2DED4622003032D3 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		DE10C3C12DDD9E170074BAE3 /* AccidentMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccidentMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentMapApp.swift; sourceTree = "<group>"; };
 		DE10C3C62DDD9E170074BAE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				DEFB83212DEB6DC100E9AD61 /* LocationManager.swift */,
 				DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */,
 				DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */,
+				DE05AE3F2DED4622003032D3 /* WeatherView.swift */,
 				DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */,
 				DE9C80C42DEC877900809E77 /* temp.jpg */,
 				DE10C3CA2DDD9E180074BAE3 /* Preview Content */,
@@ -167,6 +170,7 @@
 				DEFB83202DEB64A400E9AD61 /* AccidentModel.swift in Sources */,
 				DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */,
 				DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */,
+				DE05AE402DED4622003032D3 /* WeatherView.swift in Sources */,
 				DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */,
 				DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */,
 				DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */,
