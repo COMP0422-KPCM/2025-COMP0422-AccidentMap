@@ -15,7 +15,7 @@ struct WeatherView: View {
     
     var body: some View {
         VStack {
-            if let location = locationManager.location {
+            if let location = locationManager.currentLocation {
                 if let currentWeather = weatherServiceManager.currentWeather {
                     Text("Temperature: \(currentWeather.temperature.formatted())")
                     Text("Condition: \(currentWeather.condition.description)")
@@ -23,7 +23,7 @@ struct WeatherView: View {
                     ProgressView("Loading weather data...")
                         .onAppear {
                             Task {
-                                await weatherServiceManager.getWeather(for: location)
+                                await weatherServiceManager.getWeather(for: location.coordinate)
                             }
                         }
                 }
@@ -42,29 +42,6 @@ import Foundation
 import CoreLocation
 
 
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    private let locationManager = CLLocationManager()
-    
-    @Published var location: CLLocationCoordinate2D?
-    @Published var errorMessage: String?
-    
-    override init() {
-        super.init()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    }
-    
-    func locationManager( _ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            self.location = location.coordinate
-        }
-    }
-    
-    func locationManager( _ manager: CLLocationManager, didFailWithError error: Error) {
-        errorMessage = "Failed to get user location: \(error.localizedDescription)"
-    }
-}
 
 
 import Foundation
