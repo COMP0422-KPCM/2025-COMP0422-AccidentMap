@@ -16,6 +16,9 @@
 		DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C3C62DDD9E170074BAE3 /* ContentView.swift */; };
 		DE10C3C92DDD9E180074BAE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */; };
 		DE10C3CC2DDD9E180074BAE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE10C3CB2DDD9E180074BAE3 /* Preview Assets.xcassets */; };
+		DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D292DE59B8F002281F8 /* MainView.swift */; };
+		DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */; };
+		DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		DE10C3C62DDD9E170074BAE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE10C3CB2DDD9E180074BAE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE5A1D292DE59B8F002281F8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +81,10 @@
 				DE10C3C42DDD9E170074BAE3 /* AccidentMapApp.swift */,
 				DE10C3C62DDD9E170074BAE3 /* ContentView.swift */,
 				9D3D15A72DE85DFF00624B31 /* function.swift */,
+
+				DE5A1D292DE59B8F002281F8 /* MainView.swift */,
+				DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */,
+				DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */,
 				DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */,
 				DE10C3CA2DDD9E180074BAE3 /* Preview Content */,
 			);
@@ -165,6 +175,9 @@
 				9DAC54A02DEC719C00E64226 /* UIKitMapView.swift in Sources */,
 				DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */,
 				9DAC54A42DEC7ACD00E64226 /* MapViewRepresentable.swift in Sources */,
+				DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */,
+				DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */,
+				DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */,
 				DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */,
 				9DAC549D2DEC65E800E64226 /* LocationManager.swift in Sources */,
 				9DAC54A72DEC7D2E00E64226 /* SearchCompleterViewModel.swift in Sources */,
