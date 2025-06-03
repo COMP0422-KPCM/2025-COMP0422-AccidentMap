@@ -79,3 +79,9 @@ struct Content1View: View {
         .padding()
     }
 }
+
+#Preview {
+    NavigationStack{
+        Content1View()
+    }
+}

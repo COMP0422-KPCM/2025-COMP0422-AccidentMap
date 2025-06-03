@@ -27,6 +27,7 @@
 		DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */; };
 		DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */; };
 		DE9C80C52DEC877900809E77 /* temp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE9C80C42DEC877900809E77 /* temp.jpg */; };
+		DEC93B822DEF22E900C15068 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC93B812DEF22E900C15068 /* GraphView.swift */; };
 		DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB83192DEB5DAC00E9AD61 /* Extension.swift */; };
 		DEFB831C2DEB5F0000E9AD61 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB831B2DEB5F0000E9AD61 /* MapView.swift */; };
 		DEFB83202DEB64A400E9AD61 /* AccidentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */; };
@@ -56,6 +57,7 @@
 		DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		DE9C80C42DEC877900809E77 /* temp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = temp.jpg; path = AccidentMap/temp.jpg; sourceTree = SOURCE_ROOT; };
 		DEB4961A2DED69FA00CC124F /* AccidentMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AccidentMap.entitlements; sourceTree = "<group>"; };
+		DEC93B812DEF22E900C15068 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		DEFB83192DEB5DAC00E9AD61 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DEFB831B2DEB5F0000E9AD61 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentModel.swift; sourceTree = "<group>"; };
@@ -117,13 +119,14 @@
 				9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */,
 				9DAC549E2DEC669A00E64226 /* Info.plist */,
 				9DAC549C2DEC65DC00E64226 /* LocationManager.swift */,
-				DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */,
 				DE10C3C62DDD9E170074BAE3 /* ContentView.swift */,
 				9D3D15A72DE85DFF00624B31 /* function.swift */,
 				DE5A1D292DE59B8F002281F8 /* MainView.swift */,
 				DEFB831B2DEB5F0000E9AD61 /* MapView.swift */,
 				DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */,
+				DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */,
 				DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */,
+				DEC93B812DEF22E900C15068 /* GraphView.swift */,
 				DE05AE3F2DED4622003032D3 /* WeatherView.swift */,
 				DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */,
 				DE9C80C42DEC877900809E77 /* temp.jpg */,
@@ -218,6 +221,7 @@
 				9DAC55062DED82E500E64226 /* gptmanager.swift in Sources */,
 				9DAC55072DED82E500E64226 /* ImagePicker.swift in Sources */,
 				9DAC55082DED82E500E64226 /* Content1View.swift in Sources */,
+				DEC93B822DEF22E900C15068 /* GraphView.swift in Sources */,
 				9DAC55092DED82E500E64226 /* AccidentViewModel.swift in Sources */,
 				9DAC550A2DED82E500E64226 /* AccidentInfoView.swift in Sources */,
 				9DAC550B2DED82E500E64226 /* AccidentInfo.swift in Sources */,
