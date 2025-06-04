@@ -12,7 +12,7 @@ struct AccidentMapApp: App {
     var body: some Scene {
         WindowGroup {
 //            WeatherView()
-            MainView()
+            MapHotspotView(viewModel: MockMapHotspotViewModel())
 //            MapHotspotView(viewModel: MockMapHotspotViewModel())
         }
     }
