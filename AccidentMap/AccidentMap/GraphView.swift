@@ -20,7 +20,7 @@ struct Accident: Identifiable {
     let Precipitation: Double
     let WeatherCondition: String // 날씨 조건
     let CivilTwilight: String // 시간대 구분
-
+    
     static func createDate(year: Int, month: Int, day: Int, hour: Int, minute: Int) -> Date {
         var components = DateComponents()
         components.year = year
@@ -30,7 +30,7 @@ struct Accident: Identifiable {
         components.minute = minute
         components.second = 0 // 초는 0으로 설정
         components.timeZone = TimeZone.current // 현재 시간대 사용
-
+        
         let calendar = Calendar.current
         return calendar.date(from: components) ?? Date()
     }
@@ -61,18 +61,24 @@ let twilightFrequency = dummyAccidents.reduce(into: [String: Int]()) { counts, a
     counts[accident.CivilTwilight, default: 0] += 1
 }
 
-struct AccidentChartsView: View {
+struct GraphView: View {
+    @State private var GraphName = 0
+    
     var body: some View {
-        ScrollView {
-            VStack(spacing: 40) { // 차트 사이에 간격 추가
-                // Weather Condition 빈도 분석 그래프
+        
+        VStack(spacing:40) {
+            Picker("Fruits", selection: $GraphName){
+                Text("Weather").tag(0)
+                Text("Civil Twilight").tag(1)
+                Text("ETC").tag(2)
+            }.pickerStyle(.segmented)
+            
+            if GraphName == 0 {
                 VStack {
                     Text("날씨 조건별 사고 발생 빈도")
                         .font(.headline)
-
+                    
                     Chart {
-                        
-                        // Dictionary 데이터를 Chart에 사용하기 위해 KeyValuePairs 형태로 변환
                         ForEach(weatherFrequency.sorted(by: { $0.key < $1.key }), id: \.key) { condition, count in
                             BarMark(
                                 x: .value("날씨 조건", condition), // 날씨 조건을 x축에 표시
@@ -84,57 +90,55 @@ struct AccidentChartsView: View {
                                     .font(.caption)
                                     .foregroundColor(.gray)
                             }
-                            
-
-                            
-                            
                         }
                     }
                     .frame(height: 300) // 차트 높이 설정
                     .padding() // 패딩 추가
                 }
-
+            }
+            
+            
+            else if GraphName == 1 {
                 // Civil Twilight 빈도 분석 그래프
                 VStack {
                     Text("시간대별 사고 발생 빈도")
                         .font(.headline)
-
+                    
                     Chart {
                         // Dictionary 데이터를 Chart에 사용하기 위해 KeyValuePairs 형태로 변환
                         ForEach(twilightFrequency.sorted(by: { $0.key < $1.key }), id: \.key) { time, count in
-//                            BarMark(
-//                                x: .value("시간대", time), // 시간대를 x축에 표시
-//                                y: .value("빈도", count) // 빈도를 y축에 표시
-//                            )
-//                            // 막대 위에 빈도 값 표시
-//                            .annotation(position: .top) {
-//                                Text("\(count)")
-//                                    .font(.caption)
-//                                    .foregroundColor(.gray)
-//                            }
-                            
                             SectorMark(
-                              angle: .value("Severity", count),
-//                              innerRadius: .ratio(0.5),
-                              angularInset: 5.5
-                              
+                                angle: .value("Severity", count),
+                                //                              innerRadius: .ratio(0.5),
+                                angularInset: 5.5
+                                
                             )
                             .foregroundStyle(by: .value("time", time))
                             
                             
                         }
                     }
-                    .frame(height: 200) // 차트 높이 설정 (항목이 적으므로 더 짧게)
-                    .padding() // 패딩 추가
+                    .padding()
                 }
             }
+            
+            else {
+                Text("시간대별 사고 발생 빈도")
+                
+            }
+            
+            Spacer()
+            
         }
-        .navigationTitle("사고 분석 그래프") // 네비게이션 타이틀 (ScrollView나 NavigationView 내부에 있을 경우)
+
+        
+        
     }
+    
 }
 
 // 프리뷰 제공
 #Preview {
-    AccidentChartsView()
+    GraphView()
 }
 
