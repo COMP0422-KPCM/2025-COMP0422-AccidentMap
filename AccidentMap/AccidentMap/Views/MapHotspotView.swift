@@ -49,6 +49,8 @@ struct MapHotspotView: View {
     @State var Today = Date()
     @State private var sheetDetent: CGFloat = 0.0
     
+    @State private var advice: String = "운전 충고가 여기에 표시됩니다."
+    @State private var isLoading: Bool = false
     init(viewModel: MapHotspotViewModel = MapHotspotViewModel()) {
         _viewModel = ObservedObject(wrappedValue: viewModel)
     }
@@ -66,6 +68,9 @@ struct MapHotspotView: View {
             .mapControls {
                 MapUserLocationButton()
                     .padding(.top, 200)
+                MapUserLocationButton()
+                MapUserLocationButton()
+                MapUserLocationButton()
             }
             VStack(spacing: 10) {
                 TextField("장소 또는 주소 검색", text: $searchText, onEditingChanged: { editing in
@@ -74,8 +79,13 @@ struct MapHotspotView: View {
                 .padding(11)
                 .background(Color.white)
                 .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.blue.opacity(0.5), lineWidth: 1) // 얇은 하늘색 보더라인
+                )
                 .padding(.horizontal)
                 .padding(.top, 4)
+                
                 .onChange(of: searchText) { newValue in
                     searchVM.updateSearchQuery(newValue)
                 }
@@ -139,7 +149,7 @@ struct MapHotspotView: View {
                         .buttonStyle(MapButton())
                         
                         NavigationLink{
-                            Content1View()
+                            StatsView()
                         }
                         label : {
                             HStack{
@@ -148,7 +158,10 @@ struct MapHotspotView: View {
                             }
                         }
                         .buttonStyle(MapButton())
+                        
+                        Spacer()
                     }
+                    .padding(.horizontal)
                     
                     // ✅ [현재 지도에서 검색] 버튼 추가 (아직 기능 없이 UI만)
                     Button(action: {
@@ -156,12 +169,18 @@ struct MapHotspotView: View {
                     }) {
                         Text("현재 지도에서 검색")
                             .font(.subheadline)
-                            .foregroundColor(.white)
+                            .foregroundColor(.blue)
                             .padding(.vertical, 8)
                             .padding(.horizontal, 16)
-                            .background(Color.blue)
-                            .cornerRadius(10)
+                            .background(.white)
+                            .cornerRadius(50)
+                            .opacity(0.9)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 50)
+                                    .stroke(Color.blue.opacity(0.5), lineWidth: 1) // 얇은 하늘색 보더라인
+                            )
                     }
+                    .padding(.top, 30)
                     
                     
                     
@@ -180,16 +199,45 @@ struct MapHotspotView: View {
                             .padding(.top, 6)
                             
                             // 내용
-                            VStack(alignment: .leading, spacing: 8) {
-                                NoticeMessageView(
-                                    message: "현재 날씨는 비가 와서 위험해요",
-                                    backgroundColor: .green.opacity(0.2)
-                                )
-                                
-                                NoticeMessageView(
-                                    message: "강풍 주의보가 발효 중입니다",
-                                    backgroundColor: .yellow.opacity(0.2)
-                                )
+                            VStack(spacing: 8) {
+                                if isLoading {
+                                    VStack(spacing: 12) {
+                                        ProgressView()
+                                            .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
+                                            .scaleEffect(1.2)
+                            
+                                        Text("AI가 분석 중입니다…")
+                                            .font(.callout)
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding()
+                                } else {
+                                    Text(advice)
+                                        .font(.body)
+                                        .foregroundColor(.primary)
+                                        .multilineTextAlignment(.center)
+                                        .padding()
+                                        .transition(.opacity)
+                                        .animation(.easeInOut, value: advice)
+                                }
+//
+//                                Button(action: {
+//                                    Task {
+//                                        isLoading = true
+//                                        advice = ""
+//                                        advice = await fetchDrivingAdvice(weather: "맑음", time: DateString(in: Today))
+//                                        isLoading = false
+//                                    }
+//                                }) {
+//                                    Text("GPT에게 운전 충고 요청")
+//                                        .font(.headline)
+//                                        .frame(maxWidth: .infinity)
+//                                        .padding()
+//                                        .background(Color.blue)
+//                                        .foregroundColor(.white)
+//                                        .cornerRadius(10)
+//                                }
+//                                .padding(.horizontal)
                             }
                         } else {
                             VStack(alignment: .leading, spacing: 16) {
@@ -221,11 +269,23 @@ struct MapHotspotView: View {
                             }
                         }
                     }
-                    .padding(8)
-                    .background(.ultraThinMaterial)
-                    .cornerRadius(24)
-                    .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
+                    .padding(.horizontal, 20)
+                    .background(.white)
+                    .cornerRadius(20)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.blue.opacity(0.5), lineWidth: 1) // 얇은 하늘색 보더라인
+                    )
+//                    .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
                     .padding()
+                }
+            }
+            .onAppear {
+                Task {
+                    isLoading = true
+                    advice = ""
+                    advice = await fetchDrivingAdvice(weather: "맑음", time: DateString(in: Today))
+                    isLoading = false
                 }
             }
             
@@ -289,17 +349,16 @@ struct MapHotspotView_Previews: PreviewProvider {
 }
 
 
-struct NoticeMessageView: View {
-    let message: String
-    let backgroundColor: Color
 
-    var body: some View {
-        Text(message)
-            .font(.callout)
-            .foregroundColor(.primary)
-            .padding(5)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(backgroundColor)
-            .cornerRadius(12)
+struct MapButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.system(size: 14))
+            .fontWeight(.semibold)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 5)
+            .background(Color(red: 1, green: 1, blue: 1))
+            .cornerRadius(100)
+            .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 1)
     }
 }
