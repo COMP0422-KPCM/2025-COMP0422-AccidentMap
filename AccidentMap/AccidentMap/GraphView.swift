@@ -92,8 +92,8 @@ struct GraphView: View {
                             }
                         }
                     }
-                    .frame(height: 300) // 차트 높이 설정
-                    .padding() // 패딩 추가
+//                    .frame(height: 200) // 차트 높이 설정
+//                    .padding() // 패딩 추가
                 }
             }
             
@@ -118,7 +118,7 @@ struct GraphView: View {
                             
                         }
                     }
-                    .padding()
+//                    .padding()
                 }
             }
             
