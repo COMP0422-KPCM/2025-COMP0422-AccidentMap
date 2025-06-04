@@ -21,17 +21,21 @@ struct StatsView: View {
             List{
                 DatePicker(selection: $StartDate, in: ...Date(), displayedComponents: .date) {
                     Text("시작일")
+                        .font(.headline)
                         .foregroundColor(Color.customGray)
                 }
                 
+                
                 DatePicker(selection: $StartDate, in: StartDate...Date(), displayedComponents: .date) {
                     Text("종료일")
+                        .font(.headline)
                         .foregroundColor(Color.customGray)
                 }
                 
                 
                 HStack{
                     Text("위치")
+                        .font(.headline)
                         .foregroundColor(Color.customGray)
                     Spacer()
                     Text("\(searchText)")
