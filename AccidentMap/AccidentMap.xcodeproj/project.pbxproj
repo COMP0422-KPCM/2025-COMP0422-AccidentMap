@@ -27,10 +27,12 @@
 		DE10C3C72DDD9E170074BAE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C3C62DDD9E170074BAE3 /* ContentView.swift */; };
 		DE10C3C92DDD9E180074BAE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */; };
 		DE10C3CC2DDD9E180074BAE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE10C3CB2DDD9E180074BAE3 /* Preview Assets.xcassets */; };
+		DE2228082DF0362C00FF789B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2228072DF0362C00FF789B /* SearchView.swift */; };
 		DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D292DE59B8F002281F8 /* MainView.swift */; };
 		DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */; };
 		DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */; };
 		DE9C80C52DEC877900809E77 /* temp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE9C80C42DEC877900809E77 /* temp.jpg */; };
+		DEC93B822DEF22E900C15068 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC93B812DEF22E900C15068 /* GraphView.swift */; };
 		DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB83192DEB5DAC00E9AD61 /* Extension.swift */; };
 		DEFB831C2DEB5F0000E9AD61 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB831B2DEB5F0000E9AD61 /* MapView.swift */; };
 		DEFB83202DEB64A400E9AD61 /* AccidentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */; };
@@ -59,11 +61,13 @@
 		DE10C3C62DDD9E170074BAE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE10C3CB2DDD9E180074BAE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE2228072DF0362C00FF789B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		DE5A1D292DE59B8F002281F8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		DE9C80C42DEC877900809E77 /* temp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = temp.jpg; path = AccidentMap/temp.jpg; sourceTree = SOURCE_ROOT; };
 		DEB4961A2DED69FA00CC124F /* AccidentMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AccidentMap.entitlements; sourceTree = "<group>"; };
+		DEC93B812DEF22E900C15068 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		DEFB83192DEB5DAC00E9AD61 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DEFB831B2DEB5F0000E9AD61 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentModel.swift; sourceTree = "<group>"; };
@@ -129,13 +133,15 @@
 				9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */,
 				9DAC549E2DEC669A00E64226 /* Info.plist */,
 				9DAC549C2DEC65DC00E64226 /* LocationManager.swift */,
-				DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */,
 				DE10C3C62DDD9E170074BAE3 /* ContentView.swift */,
 				9D3D15A72DE85DFF00624B31 /* function.swift */,
 				DE5A1D292DE59B8F002281F8 /* MainView.swift */,
 				DEFB831B2DEB5F0000E9AD61 /* MapView.swift */,
 				DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */,
+				DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */,
 				DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */,
+				DE2228072DF0362C00FF789B /* SearchView.swift */,
+				DEC93B812DEF22E900C15068 /* GraphView.swift */,
 				DE05AE3F2DED4622003032D3 /* WeatherView.swift */,
 				DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */,
 				DE9C80C42DEC877900809E77 /* temp.jpg */,
@@ -231,6 +237,7 @@
 				9DAC55072DED82E500E64226 /* ImagePicker.swift in Sources */,
 				9DAC55082DED82E500E64226 /* Content1View.swift in Sources */,
 				9DEB7ECA2DF00B3000233EFF /* DrivingAdviceSimpleView.swift in Sources */,
+				DEC93B822DEF22E900C15068 /* GraphView.swift in Sources */,
 				9DAC55092DED82E500E64226 /* AccidentViewModel.swift in Sources */,
 				9DAC550A2DED82E500E64226 /* AccidentInfoView.swift in Sources */,
 				9DAC550B2DED82E500E64226 /* AccidentInfo.swift in Sources */,
@@ -241,6 +248,7 @@
 				DEFB83202DEB64A400E9AD61 /* AccidentModel.swift in Sources */,
 				9DAC54A42DEC7ACD00E64226 /* MapViewRepresentable.swift in Sources */,
 				DE5A1D2E2DE59BFC002281F8 /* StatsView.swift in Sources */,
+				DE2228082DF0362C00FF789B /* SearchView.swift in Sources */,
 				DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */,
 				DE05AE402DED4622003032D3 /* WeatherView.swift in Sources */,
 				DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */,

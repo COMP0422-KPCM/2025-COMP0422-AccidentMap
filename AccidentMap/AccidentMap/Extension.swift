@@ -67,10 +67,8 @@ extension View {
             .cornerRadius(12)
     }
     
-    // 여러 HStack 스타일 모디파이어를 묶어서 적용하는 함수 정의
     func ListStyle() -> some View {
-        self // 원래 View (여기서는 HStack) 자신을 나타냅니다.
-        
+        self
             .font(.system(size: 15))
             .fontWeight(.semibold)
             .padding(.vertical, 12)
@@ -78,8 +76,20 @@ extension View {
             .frame(maxWidth: .infinity) // 가로 길이를 부모 뷰의 최대 너비로 설정
             .background(Color.customLightGray)
             .cornerRadius(10)
-        
     }
+    
+    func StatsStyle() -> some View {
+        self
+            .font(.system(size: 15))
+            .fontWeight(.semibold)
+            .padding(.vertical, 5)
+            .padding(.horizontal,16)
+            .frame(maxWidth: .infinity) // 가로 길이를 부모 뷰의 최대 너비로 설정
+            .background(Color.customLightGray)
+            .cornerRadius(10)
+    }
+    
+    
 }
 
 

@@ -135,6 +135,43 @@ struct MapHotspotView: View {
                         }
                      Spacer()
                     }
+                    .listStyle(PlainListStyle())
+                    .frame(maxHeight: 200)
+                    .padding(.horizontal)
+                    .background(Color.white)
+                }
+                
+                // ✅ [현재 지도에서 검색] 버튼 추가 (아직 기능 없이 UI만)
+                Button(action: {
+                    // 여기에 검색 기능 넣을 수 있음
+                }) {
+                    Text("현재 지도에서 검색")
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                        .padding(.vertical, 8)
+                        .padding(.horizontal, 16)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                
+                
+                
+                Spacer()
+            }
+            
+            .padding(.top, 35)
+        }
+        .frame(height: 550)
+
+        
+        .sheet(isPresented: $isSheetPresented) {
+            VStack(spacing: 20) {
+                if let hotspot = selectedHotspot {
+                    Text("🚗 사고 다발 지역")
+                        .font(.headline)
+                    Text("위도: \(hotspot.lat)")
+                    Text("경도: \(hotspot.lng)")
+                    Text("사고 건수: \(hotspot.count)건")
                 } else {
                     HStack (spacing: 15){
                         NavigationLink{
