@@ -94,15 +94,3 @@ extension View {
 
 
 
-struct MapButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(.system(size: 17))
-            .fontWeight(.semibold)
-        //            .foregroundColor(Color(red: 0.17, green: 0.17, blue: 0.14))
-            .frame(width: 157, height: 40, alignment: .center)
-            .background(Color(red: 1, green: 1, blue: 1))
-            .cornerRadius(100)
-            .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 1)
-    }
-}
