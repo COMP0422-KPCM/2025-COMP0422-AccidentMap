@@ -6,11 +6,18 @@
 //
 
 import Foundation
+//
+//struct Accident {
+//    var id = UUID()
+//    var date: Date
+//    var latitude: Double
+//    var longitude: Double
+//    var severity: Int
+//    var Temperature: Double
+//    var Visibility: Double
+//    var Precipitation: Double
+//    var WeatherCondition: String
+//    var CivilTwilight: String
+//}
+//
 
-struct Accident {
-    var date: Date
-    var latitude: Double
-    var longitude: Double
-    var severity: Int
-    
-}
