@@ -18,6 +18,7 @@
 		9DAC55092DED82E500E64226 /* AccidentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC55012DED82E500E64226 /* AccidentViewModel.swift */; };
 		9DAC550A2DED82E500E64226 /* AccidentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC55002DED82E500E64226 /* AccidentInfoView.swift */; };
 		9DAC550B2DED82E500E64226 /* AccidentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC54FF2DED82E500E64226 /* AccidentInfo.swift */; };
+		9DBAA1C72DF9AAF2003A3D19 /* Accident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBAA1C62DF9AAF2003A3D19 /* Accident.swift */; };
 		9DEB7EC22DF0066700233EFF /* GPTManager2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB7EC12DF0066600233EFF /* GPTManager2.swift */; };
 		9DEB7EC42DF006BC00233EFF /* DrivingAdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB7EC32DF006BC00233EFF /* DrivingAdviceView.swift */; };
 		9DEB7EC82DF0087800233EFF /* gptadvice_fuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB7EC72DF0087700233EFF /* gptadvice_fuc.swift */; };
@@ -49,6 +50,7 @@
 		9DAC55022DED82E500E64226 /* Content1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content1View.swift; sourceTree = "<group>"; };
 		9DAC55032DED82E500E64226 /* gptmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptmanager.swift; sourceTree = "<group>"; };
 		9DAC55042DED82E500E64226 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9DBAA1C62DF9AAF2003A3D19 /* Accident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accident.swift; sourceTree = "<group>"; };
 		9DEB7EC12DF0066600233EFF /* GPTManager2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTManager2.swift; sourceTree = "<group>"; };
 		9DEB7EC32DF006BC00233EFF /* DrivingAdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingAdviceView.swift; sourceTree = "<group>"; };
 		9DEB7EC72DF0087700233EFF /* gptadvice_fuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gptadvice_fuc.swift; sourceTree = "<group>"; };
@@ -129,12 +131,13 @@
 				9DAC549F2DEC719C00E64226 /* UIKitMapView.swift */,
 				9DAC549E2DEC669A00E64226 /* Info.plist */,
 				9DAC549C2DEC65DC00E64226 /* LocationManager.swift */,
-				DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */,
 				DE10C3C62DDD9E170074BAE3 /* ContentView.swift */,
 				9D3D15A72DE85DFF00624B31 /* function.swift */,
 				DE5A1D292DE59B8F002281F8 /* MainView.swift */,
 				DEFB831B2DEB5F0000E9AD61 /* MapView.swift */,
 				DE5A1D2B2DE59B9C002281F8 /* ReportView.swift */,
+				DEFB831F2DEB64A400E9AD61 /* AccidentModel.swift */,
+				9DBAA1C62DF9AAF2003A3D19 /* Accident.swift */,
 				DE5A1D2D2DE59BFC002281F8 /* StatsView.swift */,
 				DE05AE3F2DED4622003032D3 /* WeatherView.swift */,
 				DE10C3C82DDD9E180074BAE3 /* Assets.xcassets */,
@@ -184,7 +187,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					DE10C3C02DDD9E170074BAE3 = {
 						CreatedOnToolsVersion = 15.3;
@@ -244,6 +247,7 @@
 				DE5A1D2A2DE59B8F002281F8 /* MainView.swift in Sources */,
 				DE05AE402DED4622003032D3 /* WeatherView.swift in Sources */,
 				DEFB831A2DEB5DAC00E9AD61 /* Extension.swift in Sources */,
+				9DBAA1C72DF9AAF2003A3D19 /* Accident.swift in Sources */,
 				DE5A1D2C2DE59B9C002281F8 /* ReportView.swift in Sources */,
 				9DEB7EC82DF0087800233EFF /* gptadvice_fuc.swift in Sources */,
 				DE10C3C52DDD9E170074BAE3 /* AccidentMapApp.swift in Sources */,
@@ -292,6 +296,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6Q3GG57US3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -355,6 +360,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6Q3GG57US3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -385,7 +391,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AccidentMap/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Q3GG57US3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AccidentMap/Info.plist;
@@ -421,7 +426,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AccidentMap/Preview Content\"";
-				DEVELOPMENT_TEAM = 6Q3GG57US3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AccidentMap/Info.plist;
