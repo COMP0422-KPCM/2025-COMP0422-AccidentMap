@@ -1,7 +1,7 @@
 package com.example.accidentmap.service;
 
-import com.example.accidentmap.entity.UserReport;
-import com.example.accidentmap.repository.UserReportRepository;
+import com.example.accidentmap.entity.RegionTrend;
+import com.example.accidentmap.repository.RegionTrendRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -9,20 +9,20 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class UserReportService {
+public class RegionTrendService {
 
-    private final UserReportRepository repository;
+    private final RegionTrendRepository repository;
 
-    public List<UserReport> getAll() {
+    public List<RegionTrend> getAll() {
         return repository.findAll();
     }
 
-    public UserReport getById(Long id) {
+    public RegionTrend getById(Long id) {
         return repository.findById(id).orElse(null);
     }
 
-    public UserReport save(UserReport report) {
-        return repository.save(report);
+    public RegionTrend save(RegionTrend trend) {
+        return repository.save(trend);
     }
 
     public void delete(Long id) {

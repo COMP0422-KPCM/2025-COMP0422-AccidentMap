@@ -1,7 +1,5 @@
 package com.example.accidentmap.controller;
-import com.example.accidentmap.dto.AccidentResponse;
 
-import com.example.accidentmap.dto.PredictedRiskFilterRequest;
 import com.example.accidentmap.entity.PredictedRisk;
 import com.example.accidentmap.service.PredictedRiskService;
 import lombok.RequiredArgsConstructor;
@@ -34,11 +32,5 @@ public class PredictedRiskController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         service.delete(id);
-    }
-
-    // ✅ 여기에 필터용 POST API 추가
-    @PostMapping("/filter")
-    public List<AccidentResponse> filterRisks(@RequestBody PredictedRiskFilterRequest request) {
-        return service.filterRisks(request);
     }
 }

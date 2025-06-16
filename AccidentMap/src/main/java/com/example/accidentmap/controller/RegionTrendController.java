@@ -1,32 +1,32 @@
 package com.example.accidentmap.controller;
 
-import com.example.accidentmap.entity.UserReport;
-import com.example.accidentmap.service.UserReportService;
+import com.example.accidentmap.entity.RegionTrend;
+import com.example.accidentmap.service.RegionTrendService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user-reports")
+@RequestMapping("/api/region-trends")
 @RequiredArgsConstructor
-public class UserReportController {
+public class RegionTrendController {
 
-    private final UserReportService service;
+    private final RegionTrendService service;
 
     @GetMapping
-    public List<UserReport> getAll() {
+    public List<RegionTrend> getAll() {
         return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public UserReport getById(@PathVariable Long id) {
+    public RegionTrend getById(@PathVariable Long id) {
         return service.getById(id);
     }
 
     @PostMapping
-    public UserReport create(@RequestBody UserReport report) {
-        return service.save(report);
+    public RegionTrend create(@RequestBody RegionTrend trend) {
+        return service.save(trend);
     }
 
     @DeleteMapping("/{id}")

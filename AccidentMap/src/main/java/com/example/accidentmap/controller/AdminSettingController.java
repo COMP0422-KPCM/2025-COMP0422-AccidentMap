@@ -1,32 +1,32 @@
 package com.example.accidentmap.controller;
 
-import com.example.accidentmap.entity.UserReport;
-import com.example.accidentmap.service.UserReportService;
+import com.example.accidentmap.entity.AdminSetting;
+import com.example.accidentmap.service.AdminSettingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user-reports")
+@RequestMapping("/api/admin-settings")
 @RequiredArgsConstructor
-public class UserReportController {
+public class AdminSettingController {
 
-    private final UserReportService service;
+    private final AdminSettingService service;
 
     @GetMapping
-    public List<UserReport> getAll() {
+    public List<AdminSetting> getAll() {
         return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public UserReport getById(@PathVariable Long id) {
+    public AdminSetting getById(@PathVariable Long id) {
         return service.getById(id);
     }
 
     @PostMapping
-    public UserReport create(@RequestBody UserReport report) {
-        return service.save(report);
+    public AdminSetting create(@RequestBody AdminSetting setting) {
+        return service.save(setting);
     }
 
     @DeleteMapping("/{id}")
