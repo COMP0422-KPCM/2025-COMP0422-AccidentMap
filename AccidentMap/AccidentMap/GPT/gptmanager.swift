@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+
+// for Report Accident
 class GPTAPIManager {
     static let shared = GPTAPIManager()
     
@@ -43,24 +45,24 @@ class GPTAPIManager {
         구조요청필요여부:
         
         출력예시:
-        사고유형: 후방 추돌,
-        심각도: 중간  ,
-        관련차량수: 3  ,
-        도로종류: 고속도로  ,
-        날씨: 맑음 (추정)  ,
-        시간대: 주간  ,
-        추정사고원인: 과속 ,  
-        보행자관련여부: 없음 ,  
-        전복여부: 없음  ,
-        추정충돌속도(km/h): 70 (추정) , 
-        차량파손정도: 중간  ,
-        구조요청필요여부: 없음 ,
+        사고유형: 후방 추돌
+        심각도: 중간  
+        관련차량수: 3  
+        도로종류: 고속도로  
+        날씨: 맑음 (추정)  
+        시간대: 주간  
+        추정사고원인: 과속 
+        보행자관련여부: 없음  
+        전복여부: 없음  
+        추정충돌속도(km/h): 70 (추정) 
+        차량파손정도: 중간  
+        구조요청필요여부: 없음 
         
         이런식으로 적어라. 이미지 인식좀 잘해봐 제대로 개빡치게 하지말고
         """
         
         let payload: [String: Any] = [
-            "model": "gpt-4o-mini",
+            "model": "gpt-4o",
             "messages": [
                 [
                     "role": "user",
@@ -113,4 +115,54 @@ class GPTAPIManager {
             completion(.success(content))
         }.resume()
     }
+}
+
+struct AccidentReport {
+    var 사고유형: String = ""
+    var 심각도: String = ""
+    var 관련차량수: String = ""
+    var 도로종류: String = ""
+    var 날씨: String = ""
+    var 시간대: String = ""
+    var 추정사고원인: String = ""
+    var 보행자관련여부: String = ""
+    var 전복여부: String = ""
+    var 추정충돌속도: String = ""
+    var 차량파손정도: String = ""
+    var 구조요청필요여부: String = ""
+}
+
+func parseAccidentReport(from text: String) -> AccidentReport {
+    var report = AccidentReport()
+    
+    let lines = text.components(separatedBy: "\n")
+    
+    for line in lines {
+        let trimmed = line.trimmingCharacters(in: .whitespaces)
+        if trimmed.isEmpty { continue }
+        
+        let components = trimmed.components(separatedBy: ":")
+        guard components.count >= 2 else { continue }
+        
+        let key = components[0].trimmingCharacters(in: .whitespaces)
+        let value = components[1...].joined(separator: ":").trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        switch key {
+        case "사고유형": report.사고유형 = value
+        case "심각도": report.심각도 = value
+        case "관련차량수": report.관련차량수 = value
+        case "도로종류": report.도로종류 = value
+        case "날씨": report.날씨 = value
+        case "시간대": report.시간대 = value
+        case "추정사고원인": report.추정사고원인 = value
+        case "보행자관련여부": report.보행자관련여부 = value
+        case "전복여부": report.전복여부 = value
+        case "추정충돌속도(km/h)": report.추정충돌속도 = value
+        case "차량파손정도": report.차량파손정도 = value
+        case "구조요청필요여부": report.구조요청필요여부 = value
+        default: break
+        }
+    }
+    
+    return report
 }

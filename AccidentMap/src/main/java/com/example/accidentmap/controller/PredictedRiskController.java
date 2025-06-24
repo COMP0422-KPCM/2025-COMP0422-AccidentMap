@@ -2,6 +2,7 @@ package com.example.accidentmap.controller;
 import com.example.accidentmap.dto.AccidentResponse;
 
 import com.example.accidentmap.dto.PredictedRiskFilterRequest;
+
 import com.example.accidentmap.entity.PredictedRisk;
 import com.example.accidentmap.service.PredictedRiskService;
 import lombok.RequiredArgsConstructor;

@@ -1,9 +1,4 @@
-//
-//  WeatherView.swift
-//  AccidentMap
-//
-//  Created by 김은정 on 6/2/25.
-//
+
 
 import SwiftUI
 import CoreLocation
@@ -41,6 +36,7 @@ struct WeatherView: View {
         }
     }
 }
+<<<<<<< HEAD:AccidentMap/AccidentMap/WeatherView.swift
 
 import Foundation
 import WeatherKit
@@ -130,6 +126,8 @@ func WeatherText(for condition: WeatherKit.WeatherCondition) -> String {
 
 
 
+=======
+>>>>>>> bcde987f73d3486dbab5def454586a57a42dd78c:AccidentMap/AccidentMap/Manager/WeatherTest/WeatherTest.swift
 #Preview {
     NavigationStack{
         WeatherView()

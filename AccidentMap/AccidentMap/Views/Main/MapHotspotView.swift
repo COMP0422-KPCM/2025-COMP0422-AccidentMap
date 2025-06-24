@@ -68,9 +68,7 @@ struct MapHotspotView: View {
             .mapControls {
                 MapUserLocationButton()
                     .padding(.top, 200)
-                MapUserLocationButton()
-                MapUserLocationButton()
-                MapUserLocationButton()
+
             }
             VStack(spacing: 10) {
                 TextField("장소 또는 주소 검색", text: $searchText, onEditingChanged: { editing in
@@ -83,8 +81,10 @@ struct MapHotspotView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.blue.opacity(0.5), lineWidth: 1) // 얇은 하늘색 보더라인
                 )
+                .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 1)
                 .padding(.horizontal)
                 .padding(.top, 4)
+                
                 
                 .onChange(of: searchText) { newValue in
                     searchVM.updateSearchQuery(newValue)
@@ -175,7 +175,7 @@ struct MapHotspotView: View {
                 } else {
                     HStack (spacing: 15){
                         NavigationLink{
-                            Content1View()
+                            ReportAccidentView()
                         }
                         label : {
                             HStack{
@@ -313,7 +313,7 @@ struct MapHotspotView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.blue.opacity(0.5), lineWidth: 1) // 얇은 하늘색 보더라인
                     )
-//                    .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
+                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 1)
                     .padding()
                 }
             }
@@ -367,17 +367,6 @@ struct MapHotspotView: View {
 
 
 
-class MockMapHotspotViewModel: MapHotspotViewModel {
-    override init() {
-        super.init()
-        self.hotspots = [
-            Hotspot(id: 1, lat: 37.3351, lng: -122.0092, count: 8),   // 북서쪽
-            Hotspot(id: 2, lat: 37.3340, lng: -122.0088, count: 12),  // 남동쪽
-            Hotspot(id: 3, lat: 37.3330, lng: -122.0093, count: 5)    // 정중앙에서 서쪽
-        ]
-    }
-    
-}
 
 struct MapHotspotView_Previews: PreviewProvider {
     static var previews: some View {
@@ -391,7 +380,7 @@ struct MapButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.system(size: 14))
-            .fontWeight(.semibold)
+//            .fontWeight(.semibold)
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
             .background(Color(red: 1, green: 1, blue: 1))
