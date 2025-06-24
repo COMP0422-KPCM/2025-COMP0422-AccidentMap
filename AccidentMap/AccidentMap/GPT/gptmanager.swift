@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+
+// for Report Accident
 class GPTAPIManager {
     static let shared = GPTAPIManager()
     
@@ -43,24 +45,24 @@ class GPTAPIManager {
         구조요청필요여부:
         
         출력예시:
-        사고유형: 후방 추돌,
-        심각도: 중간  ,
-        관련차량수: 3  ,
-        도로종류: 고속도로  ,
-        날씨: 맑음 (추정)  ,
-        시간대: 주간  ,
-        추정사고원인: 과속 ,  
-        보행자관련여부: 없음 ,  
-        전복여부: 없음  ,
-        추정충돌속도(km/h): 70 (추정) , 
-        차량파손정도: 중간  ,
-        구조요청필요여부: 없음 ,
+        사고유형: 후방 추돌
+        심각도: 중간  
+        관련차량수: 3  
+        도로종류: 고속도로  
+        날씨: 맑음 (추정)  
+        시간대: 주간  
+        추정사고원인: 과속 
+        보행자관련여부: 없음  
+        전복여부: 없음  
+        추정충돌속도(km/h): 70 (추정) 
+        차량파손정도: 중간  
+        구조요청필요여부: 없음 
         
         이런식으로 적어라. 이미지 인식좀 잘해봐 제대로 개빡치게 하지말고
         """
         
         let payload: [String: Any] = [
-            "model": "gpt-4o-mini",
+            "model": "gpt-4o",
             "messages": [
                 [
                     "role": "user",

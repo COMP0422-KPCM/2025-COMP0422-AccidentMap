@@ -56,11 +56,18 @@ struct StatsView: View {
 
             
             VStack(spacing: 15){
-                Text("검색하기")
-                    .LevelStyle(backgroundColor: Color.blue)
-                    .onTapGesture {
-                        print(StartDate, EndDate, searchText, selectedLevels)
-                    }
+                Button(action: {
+
+                }) {
+                    Label("분석하기", systemImage: "text.page.badge.magnifyingglass")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.blue)
+                .controlSize(.large)
+                .cornerRadius(12)
+
+                
                 ZStack{
                     Rectangle()
                         .foregroundColor(Color(.tertiarySystemBackground))
@@ -71,6 +78,9 @@ struct StatsView: View {
                 .cornerRadius(12)
             }
             .padding(.horizontal, 16)
+            
+            
+            
 
             
         }

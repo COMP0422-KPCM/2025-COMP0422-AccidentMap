@@ -8,6 +8,7 @@
 
 import Foundation
 
+// 2 for interation
 class GPTManager2 {
     static let shared = GPTManager2()
     
@@ -63,5 +64,19 @@ class GPTManager2 {
             
             completion(.success(content.trimmingCharacters(in: .whitespacesAndNewlines)))
         }.resume()
+    }
+}
+import SwiftUI
+
+func fetchDrivingAdvice(weather: String, time: String) async -> String {
+    await withCheckedContinuation { continuation in
+        GPTManager2.shared.requestDrivingAdvice(weather: weather, time: time) { result in
+            switch result {
+            case .success(let advice):
+                continuation.resume(returning: advice)
+            case .failure(let error):
+                continuation.resume(returning: "❌ 오류 발생: \(error.localizedDescription)")
+            }
+        }
     }
 }

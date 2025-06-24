@@ -43,3 +43,7 @@ struct AccidentInfoView: View {
         }
     }
 }
+
+#Preview {
+    AccidentInfoView()
+}
